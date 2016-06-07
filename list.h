@@ -21,4 +21,5 @@ list appendNode (list l, int value);
 list backToFront (list l);
 list frontToBack (list l);
 list removeDuplicates (list l);
+
 void printList (list l);

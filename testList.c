@@ -3,15 +3,15 @@
 #include "list.h"
 
 int main (int argc, char *argv[]){
-    list l = createList();
-    int i = 0;
-    while (i < 4){
-       l = appendNode(l, i);
-       i++;
-    }
-    printf("Original List\n");
-    printList(l);
-    printf("Front to back node\n");
-    printList(frontToBack(l));
-    return 0;
+   list l = createList();
+   l = appendNode(l, 1);
+   l = appendNode(l, 2);
+   l = appendNode(l, 2);
+   l = appendNode(l, 3);
+       
+   printf("Original List\n");
+   printList(l);
+   printf("List after duplicate removal\n");
+   printList(removeDuplicates(l));
+   return 0;
 }

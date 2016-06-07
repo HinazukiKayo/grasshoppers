@@ -67,6 +67,24 @@ list frontToBack (list l){
    return l;
 }
 
+list removeDuplicates (list l){
+
+   link curr = l -> head;
+   link prev = NULL;
+
+   while (curr != NULL){
+      if (prev != NULL && prev -> data == curr -> data){
+         prev -> next = curr -> next;
+         free(curr);
+         curr = prev -> next;
+      } else {
+         prev = curr;
+         curr = curr -> next;
+      }
+   }
+   return l;
+}
+
 void printList (list l){
    link curr = l -> head;
    while (curr != NULL){

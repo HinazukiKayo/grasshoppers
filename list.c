@@ -82,18 +82,7 @@ list removeDuplicates (list l){
    return l;
 }
 
-void printList (list l){
-   link curr = l -> head;
-   while (curr != NULL){
-      printf("%d -> ", curr -> data);
-      curr = curr -> next;
-   }
-   printf("X\n");
-}
-
-
 list deleteAlternate (list l) {
-
    link curr = l -> head;
    if (curr == NULL){
       return l;
@@ -109,34 +98,14 @@ list deleteAlternate (list l) {
    return l;
 }
 
-list deleteAlternate1 (list l) {
-   link curr = l->head;
-   link prev = NULL;
-   if (l->head!=NULL && l->head->next!=NULL){
-      prev = curr;
-      curr = curr->next;
-      if (listLength(l)%2==0) { //even
-         while (curr->next!=NULL) {
-            //delete node
-            prev->next = curr->next;
-            //down 2 nodes
-            prev = curr;
-            curr = curr->next;
-            prev = curr;
-            curr = curr->next;
-         }
-      }
-      else {
-         while (curr!=NULL) {
-            //delete node
-            prev->next = curr->next;
-            //down 2 nodes
-            prev = curr;
-            curr = curr->next;
-            prev = curr;
-            curr = curr->next;
-         }
-      }
+
+void printList (list l){
+   link curr = l -> head;
+   while (curr != NULL){
+      printf("%d -> ", curr -> data);
+      curr = curr -> next;
    }
-   return l->head;
+   printf("X\n");
 }
+
+

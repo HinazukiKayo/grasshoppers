@@ -9,8 +9,6 @@ int main (int argc, char *argv[]){
    l = appendNode(l, 3);
    l = appendNode(l, 4);
    l = appendNode(l, 5);
-       
-       
    printf("Original List\n");
    printList(l);
    printf("List after deleteAlternate\n");

@@ -98,7 +98,6 @@ list deleteAlternate (list l) {
    return l;
 }
 
-
 void printList (list l){
    link curr = l -> head;
    while (curr != NULL){

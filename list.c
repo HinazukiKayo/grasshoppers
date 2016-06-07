@@ -68,10 +68,8 @@ list frontToBack (list l){
 }
 
 list removeDuplicates (list l){
-
    link curr = l -> head;
    link prev = NULL;
-
    while (curr != NULL){
       if (prev != NULL && prev -> data == curr -> data){
          prev -> next = curr -> next;

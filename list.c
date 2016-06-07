@@ -50,6 +50,22 @@ list backToFront (list l){
    return l;
 }
 
+list frontToBack (list l){
+   link curr = l  -> head;
+   link first = curr;
+   link prev = NULL;
+   if (curr == NULL || curr -> next == NULL){
+      return l;
+   }
+   while (curr -> next != NULL){
+      prev = curr;
+      curr = curr -> next;
+   }
+   l -> head = first -> next;
+   first -> next = NULL;
+   curr -> next = first;
+   return l;
+}
 
 void printList (list l){
    link curr = l -> head;

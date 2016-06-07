@@ -19,4 +19,5 @@ link createNode (int value);
 list createList (void);
 list appendNode (list l, int value);
 list backToFront (list l);
+list frontToBack (list l);
 void printList (list l);

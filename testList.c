@@ -3,18 +3,15 @@
 #include "list.h"
 
 int main (int argc, char *argv[]){
-    
     list l = createList();
-    l = appendNode(l, 1);
-    l = appendNode(l, 2);
-    l = appendNode(l, 3);
-    l = appendNode(l, 4);
-
+    int i = 0;
+    while (i < 4){
+       l = appendNode(l, i);
+       i++;
+    }
     printf("Original List\n");
     printList(l);
-    
-    printf("Back node to front\n");
-    printList(backToFront(l));
-
+    printf("Front to back node\n");
+    printList(frontToBack(l));
     return 0;
 }
